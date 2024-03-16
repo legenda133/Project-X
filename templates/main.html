@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static',filename='icons/favico.png')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    <title></title>
+  </head>
+  <body>
+    <div class='bedolagi'>
+      <div class='captions'>Регистрация</div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Имя</span>
+        <input type="text" class="form-control" placeholder="Нажмите для ввода" aria-label="Username" id='name' aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Фамилия</span>
+        <input type="text" class="form-control" placeholder="Нажмите для ввода" aria-label="Username" id='surname' aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Логин</span>
+        <input type="text" class="form-control" placeholder="Нажмите для ввода" aria-label="Username" id='login' aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Придумайте пароль</span>
+        <input type="password" class="form-control" placeholder="Нажмите для ввода" aria-label="Username" id='paswd' aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Повторить пароль</span>
+        <input type="password" class="form-control" placeholder="Нажмите для ввода" aria-label="Username" id='passagain' aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Почта</span>
+        <input type="text" class="form-control" placeholder="Нажмите для ввода" aria-label="Username" id='mail' aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Телефон</span>
+        <input type="text" class="form-control" placeholder="Нажмите для ввода" aria-label="Username" id='phnumber' aria-describedby="basic-addon1">
+      </div>
+      <div class="my_btn">
+        <button type="button" class="btn btn-primary btn-sm" id="reg_btn">Зарегистрироваться</button>
+        <a href='/login'>Есть аккаунт?</a>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{{url_for('static',filename='js/js.js')}}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>

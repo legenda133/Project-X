@@ -1,0 +1,26 @@
+ .bedolagi{
+ 	width: 700px;
+ 	background-color: lightblue;
+ 	margin:auto;
+ 	margin-top: 50px;
+ 	padding: 30px;
+ 	border-radius: 15px;
+ }
+ .captions{
+ 	text-align:center;
+ 	font-size: 20px;
+ 	margin-bottom: 20px;
+ 	text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+.input-group-text{
+	width: 30%;
+}
+.link{
+	float:right;
+}
+.my_btn{
+	margin-top: 40px;
+}
+.error{
+	border: 1px red solid;
+}
