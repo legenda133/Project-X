@@ -1,9 +1,8 @@
 from flask import *
 import mysql.connector
-import requests
 
-session = requests.Session()
 app = Flask(__name__)
+app.secret_key = '1581'
 
 @app.before_request
 def connection():
@@ -38,10 +37,9 @@ def reg():
 @app.route("/login")
 def log():
     return render_template('login.html')
-
-@app.route("/shop")
-def sh():
-    return render_template('shop.html')
+@app.route("/admin")
+def adm():
+    return render_template('admin.html')
 
 @app.route("/ajax/registration",methods=["POST"])
 def ajax_rega():
@@ -55,12 +53,18 @@ def ajax_rega():
     user['result']=True
     return jsonify(user)
 
-@app.route
+@app.route('/shop')
 def shop():
     if session:
-        return 
+        return render_template('shop.html',session = session)
     else:
-        return 
+        return render_template('403.html')
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect('/login')
+
 
 @app.route("/ajax/login",methods=["POST"])
 def ajax_login():
@@ -71,13 +75,16 @@ def ajax_login():
         user['result']=False
         return jsonify(user)
     if req['paswd']==user['user'][0][4]:
-        session['login']=user['user'][0][3]
-        session['paswd']=user['user'][0][4]
-        user['result']= True
+        user['result'] = True
+        session['id'] = user['user'][0][0]
+        session['name'] = user['user'][0][1]
+        session['surname'] = user['user'][0][2]
+        session['status'] = user['user'][0][7]
         return jsonify(user)
     user['error']='Неправильный логин или пароль'
     user['result']=False
     return jsonify(user)
+
 
 if __name__ == '__main__':
     app.run(debug=True,port=8000)

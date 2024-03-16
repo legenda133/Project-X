@@ -62,14 +62,16 @@ $(document). ready(function() {
 			  }),
 			})
 			.done(function(result) {
-				if (result.result){
-					window.location.href = '/shop';
-				}else{
-					$("#login").addClass('is-invalid')
-					$("#paswd").addClass('is-invalid')
-					$('.invalid-feedback').html(result.error)
-				}
+			    console.log(result)
+                if(result.result){
+			    	window.location.href = '/shop';
+			    }else{
+			    	$('#login').addClass('is-invalid');
+			    	$('#paswd').addClass('is-invalid');
+			    	$('.invalid-feedback').html(result.error);
+			    }
 			});
 		}
+
 	})
 }) 

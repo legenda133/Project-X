@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    <title></title>
+  </head>
+  <body>
+  <div class='bedolagi'>
+      <div class='captions'>Создание товара</div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Название</span>
+        <input type="text" class="form-control" placeholder="Нажмите для ввода" aria-label="Username" id='title' aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Картинка</span>
+        <input type="image" src="http://example.com/path/to/image.png" id='category'>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Цена</span>
+        <input type="text" class="form-control" placeholder="Нажмите для ввода" aria-label="Username" id='price' aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Категория</span>
+        <input type="text" class="form-control" placeholder="Нажмите для ввода" aria-label="Username" id='category' aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Описание</span>
+        <input type="password" class="form-control" placeholder="Нажмите для ввода" aria-label="Username" id='description' aria-describedby="basic-addon1">
+      </div>
+        <button type="button" class="btn btn-primary btn-sm" id="reg_btn">Добавить товар</button>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{{url_for('static',filename='js/js.js')}}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
